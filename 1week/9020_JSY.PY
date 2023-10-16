@@ -11,7 +11,7 @@ def prime(num):
     return True
 
 for x in data:
-    even_half = int(x/2)
+    even_half = x//2
     for y in range(even_half):
         tmp = even_half-y
         if prime(tmp)==True:
