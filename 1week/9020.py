@@ -1,7 +1,7 @@
 import sys
 
 T = int(sys.stdin.readline())
-data = [int(sys.stdin.readline().strip()) for p in range(T)]
+data = list(map(int,sys.stdin.readline().split()) for x in range(T))
 
 for k in data:
     

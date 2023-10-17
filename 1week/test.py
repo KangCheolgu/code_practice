@@ -1,5 +1,6 @@
-pos = [1,2,3,4]
+pos = [None,2,3,4]
 
-for i in range(4):
-    print(f'{pos[i]:2}', end='')
+for i in range(len(pos)):
+    if pos[1]:
+        print('조건문')
 print()
