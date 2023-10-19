@@ -1,7 +1,14 @@
 import sys
+a,b,c = map(int,sys.stdin.readline().split())
 
-data = list(map(int,sys.stdin.readline().split()))
-
-ans = data[0] ** data[1] % data[2]
-
-print(ans)
+def multi (a,b):
+  if b == 1:
+      return a%c
+  else:
+      tmp = multi(a,b//2)
+      if b %2 ==0:
+          return (tmp * tmp) % c
+      else:
+          return (tmp  * tmp * a) % c
+          
+print(multi(a,b))

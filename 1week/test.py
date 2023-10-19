@@ -1,6 +1,7 @@
-pos = [None,2,3,4]
+test = [[0,1],[1,9],[2,7],[3,4]]
 
-for i in range(len(pos)):
-    if pos[1]:
-        print('조건문')
-print()
+print(test[-1][1])
+
+
+while test:
+    print(test[-1][1])
