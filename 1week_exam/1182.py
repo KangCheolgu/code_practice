@@ -26,7 +26,3 @@ for i in range(T):
     visited[i] = 0
 
 print(cnt)
-
-
-
-
