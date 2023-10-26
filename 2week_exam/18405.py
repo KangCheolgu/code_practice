@@ -26,10 +26,9 @@ def bfs():
     sec_cnt = 0
     second = 0
     queue = deque()
-    changed = 0
     
     # 초기값 넣어주기
-    for x in range(1,len(virus_data)+1):
+    for x in range(1,len(virus_state)+1):
         if virus_state[x] != None:
             queue.append(x[0], x[1], second)
 
@@ -38,8 +37,9 @@ def bfs():
 
         if sec_cnt != s:
             sec_cnt = s
-            changed = 0
-        
+            if sec_cnt == S:
+                return print(virus_data[Y][X])
+
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
@@ -47,12 +47,11 @@ def bfs():
             if  0 <= nx < N and 0 <= ny < N and virus_data[ny][nx] == 0 and visited[ny][nx] == False:
                 print('조건 통과',y,'행',x,'열','전염된 행렬',ny,nx , s, '초')
                 s += 1
-                changed = 1
                 visited[ny][nx] = True
                 queue.append((nx, ny, s))
-    
-    if changed == 0:
-        print(virus_data[Y][X])
+
+bfs()
+
         
    
 
