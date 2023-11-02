@@ -15,7 +15,7 @@ for i in range(N):
     dp[0] = sort_list[i][1]
 
     for j in range(K,sort_list[i][0]-1,-1):
-        print(j)
+        # print(j)
         if j == sort_list[i][0]:
             dp[j] = max(dp[j] ,dp[0])
 
